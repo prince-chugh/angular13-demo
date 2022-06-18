@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "name": "Test",
+      "username": "test",
+      "email": "test@123",
+      "contact": "7788778877",
+      "address": "abcd",
+      "role": "user",
+      "id": 1
+    },
+    {
+      "name": "test2",
+      "username": "test2",
+      "email": "test2@gmail.com",
+      "contact": "34242343432",
+      "address": "328923724",
+      "role": "user",
+      "id": 2
+    }
+  ]
+}

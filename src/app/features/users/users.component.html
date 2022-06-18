@@ -18,6 +18,11 @@
             <td>{{user.role}}</td>
             <td><a style="cursor: pointer" (click)="onEdit(user)">Edit</a></td>
         </tr>
+        <tr *ngIf="!users || !users.length">
+            <td [attr.colspan]="7" >
+                No Users Found. Please add new user.
+            </td>
+        </tr>
     </table>
 </div>
 <router-outlet></router-outlet>

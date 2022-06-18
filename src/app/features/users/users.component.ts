@@ -16,11 +16,11 @@ export class UsersComponent implements OnInit {
   constructor(private commonService: CommonService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.activatedRoute.data.subscribe((response: any) => {
+    /* this.activatedRoute.data.subscribe((response: any) => {
       this.users = response[0];
-    })
+    }) */
 /*     this.users = this.activatedRoute.snapshot.data[0] */
-      /* this.userSubscription = this.commonService.getUsers().pipe(delay(3000)).subscribe({
+     this.userSubscription = this.commonService.getUsers().subscribe({
         next: (response: any) => {
           this.users = response;
         },
@@ -30,7 +30,7 @@ export class UsersComponent implements OnInit {
         complete: () => {
           console.log('Observable of fetch user is completed');
         }
-      }); */
+      });
   }
 
   ngOnDestroy() {

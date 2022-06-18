@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path:'error', component: ErrorMessageComponent},
-  {
+  /* {
     path: 'user', component: UsersComponent,
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
@@ -18,9 +18,9 @@ const routes: Routes = [
       { path: 'add', component: AddUserComponent, canDeactivate: [AuthGuard] },
       { path: 'edit', component: AddUserComponent }
     ]
-  },
-  /* {path: 'user', canDeactivate: [AuthGuard],
-  loadChildren: () => import('./features/users/users.module').then(m => m.UsersModule)}, */
+  }, */
+  {path: 'user', canActivate: [AuthGuard],
+  loadChildren: () => import('./features/users/users.module').then(m => m.UsersModule)},
   {
     path: 'department',
     canActivate: [AuthGuard],

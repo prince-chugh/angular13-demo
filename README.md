@@ -5,6 +5,22 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Install Packages
 Go to angular-demo directory and run command, npm install to install node_modules packages.
 
+## To mock APIs json-server package is used
+- A file, db.json is added in assets folder.
+- json-server can be userd to write mock-apis that can consume json data and provide json response
+- Follow this guild to user mock-apis: https://github.com/typicode/json-server/blob/master/README.md
+- db.json file added with below content:
+{
+    "users": []
+}
+So it can have /users api.
+To start json-server which will be listened on 3000 port.
+Run command:  json-server --watch src/assets/db.json
+And to use mock-apis, use, http://localhost:3000
+e.g.
+@GET: http://localhost:3000/users
+For POST/PUT/PATCh apis, pass header, "Content-Type": "application/json"
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
 
 const url = 'http://localhost:3000';
@@ -9,16 +9,19 @@ export class CommonService {
   user!: any;
   constructor(private http: HttpClient) { }
 
+  headers = {                                                                                                                                                                                 
+    headers: new HttpHeaders({'Content-Type': 'application/json'}), 
+  };
   getInfo() {
     return true;
   }
 
   getUsers() {
-    return this.http.get(url+'/userss');
+    return this.http.get(url+'/users');
   }
 
   createUser(payload: any) {
-    return this.http.post(url+'/users', payload);
+    return this.http.post(url+'/users', payload, this.headers);
   }
 
   setUserData(data: any) {

@@ -15,9 +15,7 @@ export class AppHttpInterceptor implements HttpInterceptor {
         return next.handle(request).pipe(
             map(event => {
                 if (event instanceof HttpResponse && event.body) {
-                    event.body.forEach((item: any) => {
-                        item.name = item.name.toUpperCase();
-                    });
+                    // Do anything with response here.
                 }
                 return event;
             }),
@@ -25,7 +23,7 @@ export class AppHttpInterceptor implements HttpInterceptor {
                 let message = '';
                 if (err instanceof HttpErrorResponse) {
                     message = (err.error && err.error.message) ? err.error.message : err.statusText;
-                    this.commonService.setErrorMessage('Error in Request: ' + err.error.message);
+                    this.commonService.setErrorMessage('Error in Request: ' + message);
                     this.router.navigate(['error']);
                 }
                 return throwError(() => new Error(message));
