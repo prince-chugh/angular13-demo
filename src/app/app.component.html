@@ -1,0 +1,31 @@
+<div class="header"><h2>Demo Project</h2></div>
+<div class="container">
+    <div class="menu">
+        <a [class.active]="activeIndex === 4" class="menu-item" (click)="onClickMenu(4)">Home</a>
+		<span class="menu-divider"></span>
+        <a [class.active]="activeIndex === 0" class="menu-item" (click)="onClickMenu(0)">All Users</a>
+		<span class="menu-divider"></span>
+        <a [class.active]="activeIndex === 1" class="menu-item" (click)="onClickMenu(1)">Add User</a>
+		<span class="menu-divider"></span>
+        <a [class.active]="activeIndex === 2" class="menu-item" (click)="onClickMenu(2)">All Departments</a>
+        <span class="menu-divider"></span>
+        <a [class.active]="activeIndex === 3" class="menu-item" (click)="onClickMenu(3)">Add Department</a>
+    </div>
+    <router-outlet></router-outlet>
+</div>
+<!-- <div class="container">Below this is second router outlet
+    <router-outlet name='second'></router-outlet>
+</div> -->
+<div class="footer">
+    My App Footer
+</div>
+<!-- <p appCustomAttr>This is custom attribute Directive</p> -->
+<!-- <div *appCustomStruct="flag">
+    <p>Line 1: This is custom structural Directive</p>
+    <p>Line 2: This is custom structural Directive</p>
+</div> -->
+<!-- <p *ngIf="flag">This is built in structural Directive</p> -->
+<!-- <app-parent></app-parent>
+<app-child>
+    This is passed from app component
+ </app-child> -->

@@ -1,0 +1,14 @@
+<form [formGroup]="formGroup">
+    <div class="row" *ngFor="let control of formControls">
+        <div class="column-1">
+            <label>{{control.label}}: </label>
+        </div>
+        <div class="column-2" [ngSwitch]="control.controlType">
+            <input *ngSwitchCase="'textbox'" [type]="control.type ? control.type : 'text'" [formControlName]="control.key" />
+            <select *ngSwitchCase="'dropdown'" [formControlName]="control.key">
+                <option *ngFor="let option of control.options" [value]="option.key">{{option.label}}</option>
+            </select>    
+            <app-error-message [control]="formGroup.controls[control.key]"></app-error-message>
+        </div>
+    </div>
+</form>

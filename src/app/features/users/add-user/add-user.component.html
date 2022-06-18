@@ -1,0 +1,83 @@
+<h1>{{isNew ? 'Create New' : 'Edit'}} User</h1>
+<br>
+
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <ui-form [formControls]="formControls" [formGroup]="form"></ui-form>
+    <!-- <div class="row" *ngFor="let control of formControls">
+        <div class="column-1">
+            <label>{{control.label}}: </label>
+        </div>
+        <div class="column-2" [ngSwitch]="control.controlType">
+            <input *ngSwitchCase="'textbox'" [type]="control.type ? control.type : 'text'" [formControlName]="control.key" />
+            <select *ngSwitchCase="'dropdown'" [formControlName]="control.key">
+                <option *ngFor="let option of control.options" [value]="option.key">{{option.label}}</option>
+            </select>    
+            <app-error-message [control]="form.get('name')"></app-error-message>
+        </div>
+    </div> -->
+
+    <!-- <div class="row">
+        <div class="column-1">
+            <label>Name: </label>
+        </div>
+        <div class="column-2">
+            <input type="text" formControlName="name" />
+            <app-error-message [control]="form.get('name')"></app-error-message>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="column-1">
+            <label>Username: </label>
+        </div>
+        <div class="column-2">
+            <input type="text" [ngClass]="{'text-control-error' : form.get('username')?.dirty && form.get('username')?.status === 'INVALID'}" formControlName="username"/>
+            <app-error-message [control]="form.get('username')"></app-error-message>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="column-1">
+            <label>Email: </label>
+        </div>
+        <div class="column-2">
+            <input type="text" formControlName="email"/>
+            <app-error-message [control]="form.get('email')"></app-error-message>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="column-1">
+            <label>Contact: </label>
+        </div>
+        <div class="column-2">
+            <input type="text" formControlName="contact"/>
+            <app-error-message [control]="form.get('contact')"></app-error-message>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="column-1">
+            <label>Address: </label>
+        </div>
+        <div class="column-2">
+            <input type="text" formControlName="address"/>
+            <app-error-message [control]="form.get('address')"></app-error-message>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column-1">
+            <label>Role: </label>
+        </div>
+        <div class="column-2">
+            <select formControlName="role">
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+            </select>
+            <app-error-message [control]="form.get('address')"></app-error-message>
+        </div>
+    </div> -->
+
+    <button style="margin-top: 10px;" type="submit">Create User</button>
+</form>

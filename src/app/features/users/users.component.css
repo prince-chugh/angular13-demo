@@ -1,0 +1,19 @@
+.user-table {
+    border-collapse: collapse;
+    padding: 0.5rem;
+}
+.user-table th {
+    text-align: left;
+    background-color: #1a8cff;
+    color: white;
+}
+
+.user-table td,
+.user-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.user-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
