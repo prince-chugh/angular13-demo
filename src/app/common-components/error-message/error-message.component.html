@@ -1,0 +1,6 @@
+<div *ngIf="control" class="error-message">
+    <span class="text-error">{{getErrorMessage()}}</span>
+</div>
+<div *ngIf="message && message !== ''" class="error-message">
+    <span class="text-error">{{message}}</span>
+</div>

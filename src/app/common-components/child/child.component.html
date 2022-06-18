@@ -1,0 +1,25 @@
+<!-- <div [ngClass]="username === 'Kapil' ? 'yellow-color' : 'green-color'"
+[ngStyle]="{'font-size': username === 'Kapil' ? '18px' : '14px'}">
+    Voting for Username:: {{username}}</div>
+ <div #myDiv [ngSwitch]="username">
+    <div *ngSwitchCase="'Kapil'">This user is Kapil</div>
+    <div *ngSwitchCase="'Shekhar'">This user is Shekhar</div>
+    <div *ngSwitchCase="'Virender'">This user is Virender</div>
+    <div *ngSwitchDefault>This user is Vinay</div>
+ </div>
+ 
+ <ng-template #template1>
+    <p>Template 1, if condition</p>
+ </ng-template>
+ <ng-template #template2>
+   <p>Template 2, else condition</p>
+</ng-template>
+<button (click)="onAgreed()">Agree</button>
+<button *ngIf="username !== 'Kapil'" (click)="onDisagreed()" style="margin-left: 5px;">Disagree</button> -->
+
+<div>
+   This is child component: <br>
+   <ng-content></ng-content>
+   After this next 
+   <ng-content></ng-content>
+</div>

@@ -1,0 +1,35 @@
+<div style="margin-top: 80px;">
+<p>Parent component works</p>
+<!--     <div *ngFor="let name of users; let i=index">
+        <br>
+        {{i}}. In Parent Component:: User {{name}}
+        <app-child #childComp [username]="name" (votingResult)="onVoting($event)"></app-child>
+        <br>
+    </div>
+    <br><br> -->
+   <!--  <input #userInput type="text" /> -->
+<!--     <button (click)="showInput(userInput.value)">Show Input</button>
+    <button (click)="showInput(userInput.value)">Hide Input</button>
+    <strong>Voting Results for User:  {{enteredUser}}</strong>
+    <div>Agreed: {{agreedCount}}</div>
+    <div>Disagreed: {{disagreedCount}}</div> -->
+    <!-- <div *ngIf="flag">
+        Hello this is new div
+    </div> -->
+    <ng-template [ngIf]="flag">
+        <div>
+            Hello this is new div inside ng-template
+        </div>
+    </ng-template>
+ <!--    <ng-container *ngIf="flag">
+        <div *ngFor="let name of users; let i=index">
+            <div>User name: {{name}}</div>
+        </div>
+    </ng-container> -->
+    <app-child>
+        <div *ngFor="let user of users; let i=index">
+            <div>User name: {{user.name}}</div>
+        </div>
+        <p>{{title}}</p>
+    </app-child>
+</div>
